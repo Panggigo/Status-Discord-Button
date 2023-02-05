@@ -1,0 +1,19 @@
+{
+  "name": "status-dc-replit",
+  "version": "1.0.0",
+  "description": "discord status includes a button for replit website",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "discordbutton"
+  ],
+  "author": "Panggigo2712",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js-selfbot-v13": "^2.10.1",
+    "http": "^0.0.1-security",
+    "moment": "^2.29.4"
+  }
+}

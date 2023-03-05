@@ -24,7 +24,7 @@ async function setActivity(){
         .setAssetsSmallText(`HEHEHEHEHE`) // Text Small Image
         .setState(`${clock}${moment().utcOffset('+07:00').format('h:mm:ss A')} Indonesia/Java`) // State
         .setDetails(`Russia🤝🏻Ukraine`) // Details
-        .addButton(`Github`, `https://github.com/Panggigo-2712/`) // Add Button
+        .addButton(`Github`, `https://github.com/Panggigo/`) // Add Button
         .addButton(`Youtube`, `https://www.youtube.com/channel/UCYY2dC8od7sqJYeNX445c0w/`)
         client.user.setActivity(status) // Activate
 }

@@ -1,36 +1,36 @@
+// https://optiklink.com/home free bot hosting, choose Discord - JS Bot (Node.JS) 
+
 const { Client, RichPresence } = require('discord.js-selfbot-v13');
 const moment = require('moment');
 
 moment.locale('en');
 const client = new Client({ checkUpdate: false });
 
-const base = 0xdd50; // Unicode Base untuk Emoji Jam
-let index = 0; // Indeks untuk pergantian tombol
+const base = 0xdd50;
+let index = 0;
 
-// 🎯 Fungsi untuk mendapatkan emoji jam sesuai WIB
 const clock = () => {
-    const wibHour = (moment().utc().hour() + 7) % 12 || 12; // Konversi jam ke WIB (format 12 jam)
-    return `\uD83D${String.fromCharCode(base + (wibHour - 1))}`; // Pilih emoji jam yang sesuai
+    const wibHour = (moment().utc().hour() + 7) % 12 || 12;
+    return `\uD83D${String.fromCharCode(base + (wibHour - 1))}`;
 };
 
-// Array tombol yang akan berganti-ganti
 const buttonSets = [
-    [
-        { label: '💻 Github', url: 'https://github.com/Panggigo' },
-        { label: '📺 Youtube', url: 'https://www.youtube.com/@Panggigo2712' }
-    ],
-    [
-        { label: '📷 Instagram', url: 'https://www.instagram.com/panggigo27/' },
-        { label: '💬 Discord', url: 'https://discord.gg/aPBK3UrHzw' }
-    ],
 	[
-        { label: '🐦 X', url: 'https://x.com/Panggigo2712' },
-        { label: '🌍 VK', url: 'https://vk.com/panggigo' }
-    ],
+        	{ label: '💻 Github', url: 'https://github.com/Panggigo' },
+        	{ label: '📺 Youtube', url: 'https://www.youtube.com/@Panggigo2712' }
+	],
+    	[
+        	{ label: '📷 Instagram', url: 'https://www.instagram.com/panggigo27/' },
+        	{ label: '💬 Discord', url: 'https://discord.gg/aPBK3UrHzw' }
+    	],
+	[
+        	{ label: '🐦 X', url: 'https://x.com/Panggigo2712' },
+        	{ label: '🌍 VK', url: 'https://vk.com/panggigo' }
+    	],
 	[
 		{ label: '📱 Tiktok', url: 'https://www.tiktok.com/@panggigo2712' },
-        { label: '🖥️Project Reality💻', url: 'https://www.realitymod.com/downloads' }
-    ]
+        	{ label: '🖥️Project Reality💻', url: 'https://www.realitymod.com/downloads' }
+    	]
 ];
 
 async function setActivity(){

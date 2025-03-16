@@ -1,7 +1,7 @@
 {
   "name": "status-dc-replit",
   "version": "1.0.0",
-  "description": "discord status includes a button for replit website",
+  "description": "discord status includes a button",
   "main": "index.js",
   "scripts": {
     "test": "node index.js"
